@@ -343,8 +343,8 @@ export default function Home() {
               <div className="mt-12">
                 <h3 className="text-xl font-bold text-pink-600 mb-4">Business Hours</h3>
                 <div className="space-y-2">
-                  <p className="text-gray-700"><span className="font-medium">Monday - Saturday:</span> 10:00 AM - 8:00 PM</p>
-                  <p className="text-gray-700"><span className="font-medium">Sunday:</span> 10:00 AM - 6:00 PM</p>
+                  <p className="text-gray-700"><span className="font-medium">Monday - Sunday:</span> 11:00 AM - 8:30 PM</p>
+                  {/* <p className="text-gray-700"><span className="font-medium">Sunday:</span> 10:00 AM - 6:00 PM</p> */}
                 </div>
               </div>
             </div>
