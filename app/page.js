@@ -589,7 +589,7 @@ const galleryImages = [
           </div>
           
           <div className="border-t border-pink-800 mt-8 pt-8 text-center">
-            <p>&copy; {new Date().getFullYear()} Glow Look Ladies Saloon & Spa. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Glow Look Ladies Saloon & Spa. All rights reserved. Website Developed & Maintained by Digital Exposure Online Services.</p>
           </div>
         </div>
       </footer>
