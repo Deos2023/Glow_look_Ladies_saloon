@@ -62,6 +62,50 @@ export default function Home() {
     icon: <FaSpa className="text-pink-600" size={24} />
   }
 ];
+const galleryImages = [
+  {
+    src: "/img/img (1).jpeg",
+    alt: "Professional hair styling at Glow Look",
+    category: "Hair Services",
+    description: "Our expert stylist creating a beautiful blowout"
+  },
+  {
+    src: "/img/img (2).jpeg",
+    alt: "Our luxurious salon interior",
+    category: "Bridal Services",
+    description: "Complete bridal makeup for your special day"
+  },
+  {
+    src: "/img/img (3).jpeg",
+    alt: "Luxury facial treatment",
+    category: "Skin Care",
+    description: "Rejuvenating facial with premium products"
+  },
+  {
+    src: "/img/img (4).jpeg",
+    alt: "Relaxing spa environment",
+    category: "Spa Treatments",
+    description: "Pampering spa experience in our tranquil space"
+  },
+  {
+    src: "/img/img (5).jpeg",
+    alt: "Elegant hair Styling",
+    category: "Nail Services",
+    description: "Creative nail art for any occasion"
+  },
+  {
+    src: "/img/img (6).jpeg",
+    alt: "Professional  service",
+    category: "Hair Removal",
+    description: "Smooth results with our expert waxing"
+  },
+  {
+    src: "/img/img (7).jpeg",
+    alt: "Hair Treatment",
+    category: "Salon",
+    description: "Elegant and hygienic environment"
+  }
+];
 
   const features = [
     {
@@ -293,6 +337,67 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
+{/* Gallery Section */}
+<section id="gallery" className="py-20 bg-white">
+  <div className="max-w-6xl mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-3xl font-bold text-pink-600 mb-4">Our Gallery</h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        Witness the transformations and our beautiful salon space
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {galleryImages.map((image, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.03 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <img 
+            src={image.src} 
+            alt={image.alt}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <div>
+              <span className="text-xs text-pink-300">{image.category}</span>
+              <p className="text-white font-medium">{image.description}</p>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    <div className="flex justify-center mt-12">
+      <motion.a
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
+        href="https://instagram.com/glowlooksalon"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-medium transition-all"
+      >
+        View More on Instagram <FaArrowRight className="ml-2" size={18} />
+      </motion.a>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-pink-50">
